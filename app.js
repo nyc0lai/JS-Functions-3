@@ -60,7 +60,7 @@ const calculateSleepDebt = () => {
     }
         console.log(`actual = ${actualSleepHours} hours.`);
 
-    console.log(`ideal = ${idealSleepHours} hours.`);
+        console.log(`ideal = ${idealSleepHours} hours.`);
 }
 
 calculateSleepDebt();
