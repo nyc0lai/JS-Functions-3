@@ -1,6 +1,6 @@
-const user = 'Turturica' 
+const user = 'Ion' 
 
-function getSleepHours (day) {
+const getSleepHours = day => {
     switch (day) {
         case 'monday':
             hours = 8;
@@ -27,32 +27,39 @@ function getSleepHours (day) {
     return hours;
 }
 
-function getActualSleepHours() {
-    return getSleepHours('monday')+
-        getSleepHours('tuesday')+
-        getSleepHours('wednesday')+
-        getSleepHours('thursday')+
-        getSleepHours('friday')+
-        getSleepHours('saturday')+
-        getSleepHours('sunday');
+const getActualSleepHours = () => {return getSleepHours('monday') +
+                                        getSleepHours('tuesday')+
+                                        getSleepHours('wednesday')+
+                                        getSleepHours('thursday')+
+                                        getSleepHours('friday')+
+                                        getSleepHours('saturday')+
+                                        getSleepHours('sunday');
+                                    }
+
+const getIdealSleepHours = idealHours => {
+    return idealHours * 7;
 }
 
-function getIdealSleepHours() {
-    var idealHours = 7;
-    return idealHours*7;
-}
+const calculateSleepDebt = () => {
 
-function calculateSleepDebt(){
     actualSleepHours = getActualSleepHours();
-    idealSleepHours = getIdealSleepHours();
+
+    idealSleepHours = getIdealSleepHours(7);
+
     if (actualSleepHours == idealSleepHours) {
+
         console.log(`${user} got the perfect amount of sleep`);
+
     } else if (actualSleepHours > idealSleepHours) {
+
         console.log(`${user} got more sleep than needed.`);
+
     } else if (actualSleepHours < idealSleepHours) {
+
         console.log(`${user} should get some rest`);
     }
-    console.log(`actual = ${actualSleepHours} hours.`);
+        console.log(`actual = ${actualSleepHours} hours.`);
+
     console.log(`ideal = ${idealSleepHours} hours.`);
 }
 
