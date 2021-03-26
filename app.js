@@ -1,5 +1,3 @@
-const user = 'Ion' 
-
 const getSleepHours = day => {
     switch (day) {
         case 'monday':
@@ -40,7 +38,7 @@ const getIdealSleepHours = idealHours => {
     return idealHours * 7;
 }
 
-const calculateSleepDebt = () => {
+const calculateSleepDebt = user => {
 
     actualSleepHours = getActualSleepHours();
 
@@ -63,4 +61,4 @@ const calculateSleepDebt = () => {
         console.log(`ideal = ${idealSleepHours} hours.`);
 }
 
-calculateSleepDebt();
+calculateSleepDebt('Ion');
