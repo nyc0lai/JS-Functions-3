@@ -25,18 +25,15 @@ const getSleepHours = day => {
     return hours;
 }
 
-const getActualSleepHours = () => {return getSleepHours('monday') +
+const getActualSleepHours = () => getSleepHours('monday') +
                                         getSleepHours('tuesday')+
                                         getSleepHours('wednesday')+
                                         getSleepHours('thursday')+
                                         getSleepHours('friday')+
                                         getSleepHours('saturday')+
                                         getSleepHours('sunday');
-                                    }
-
-const getIdealSleepHours = idealHours => {
-    return idealHours * 7;
-}
+                                    
+const getIdealSleepHours = idealHours => idealHours * 7;
 
 const calculateSleepDebt = user => {
 
