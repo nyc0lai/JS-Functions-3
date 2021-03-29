@@ -35,27 +35,28 @@ const getActualSleepHours = () => getSleepHours('monday') +
                                     
 const getIdealSleepHours = idealHours => idealHours * 7;
 
-const calculateSleepDebt = user => {
 
-    actualSleepHours = getActualSleepHours();
+const calculateSleepDebt = (userName, userHours) => {
 
-    idealSleepHours = getIdealSleepHours(7);
+    let actualSleepHours = getActualSleepHours();
+
+    let idealSleepHours = getIdealSleepHours(userHours);
 
     if (actualSleepHours == idealSleepHours) {
 
-        console.log(`${user} got the perfect amount of sleep`);
+        console.log(`${userName} got the perfect amount of sleep`);
 
     } else if (actualSleepHours > idealSleepHours) {
 
-        console.log(`${user} got more sleep than needed.`);
+        console.log(`${userName} got more sleep than needed.`);
 
     } else if (actualSleepHours < idealSleepHours) {
 
-        console.log(`${user} should get some rest`);
+        console.log(`${userName} should get some rest`);
     }
         console.log(`actual = ${actualSleepHours} hours.`);
 
         console.log(`ideal = ${idealSleepHours} hours.`);
 }
 
-calculateSleepDebt('Ion');
+calculateSleepDebt('Petrica', 6); // 1) user Name; 2) user ideal Hours
